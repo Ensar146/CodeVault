@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved CodeBlocks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="settings.js"></script>
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-btn">☰</label>
+
+  <nav class="menu">
+    <a href="index.html">Main Page</a>
+    <a href="index2.html">DashBoard</a>
+    <a href="index3.html">Saved CodeBlocks</a>
+    <a href="index4.html">Help & Settings</a>
+  </nav>
+
+  <main class="dashboard">
+    <h1>⭐ Favorite Code Snippets</h1>
+    <div id="fav-grid" class="snippet-grid"></div>
+  </main>
+
+  <!-- Edit popup -->
+  <div id="modal" class="modal">
+    <div class="modal-box">
+      <h2>Edit Code Snippet</h2>
+
+      <label for="title">Title</label>
+      <input type="text" id="title">
+
+      <label for="type">Programming Language</label>
+      <input type="text" id="type" list="languages">
+      <datalist id="languages">
+        <option value="HTML">
+        <option value="CSS">
+        <option value="JavaScript">
+        <option value="Python">
+        <option value="Java">
+        <option value="C++">
+        <option value="C#">
+        <option value="PHP">
+        <option value="SQL">
+      </datalist>
+
+      <label for="code">Code</label>
+      <textarea id="code" rows="10"></textarea>
+
+      <div class="modal-buttons">
+        <button id="cancel-btn" class="btn-gray">Cancel</button>
+        <button id="save-btn" class="btn-blue">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script3.js"></script>
+</body>
+</html>

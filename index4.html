@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Settings</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="settings.js"></script>
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-btn">☰</label>
+
+  <nav class="menu">
+    <a href="index.html">Main Page</a>
+    <a href="index2.html">DashBoard</a>
+    <a href="index3.html">Saved CodeBlocks</a>
+    <a href="index4.html">Help & Settings</a>
+  </nav>
+
+  <main class="dashboard">
+    <h1>Help & Settings</h1>
+    <div id="status"></div>
+
+    <!-- General settings -->
+    <section class="panel">
+      <h2>General Settings</h2>
+
+      <div class="setting-row">
+        <div>Theme<small>Background colors of the whole site</small></div>
+        <div class="theme-options" id="theme-options">
+          <button class="theme-swatch" data-theme="blue" title="Blue"></button>
+          <button class="theme-swatch" data-theme="purple" title="Purple"></button>
+          <button class="theme-swatch" data-theme="green" title="Green"></button>
+          <button class="theme-swatch" data-theme="dark" title="Dark"></button>
+        </div>
+      </div>
+
+      <div class="setting-row">
+        <div>Recent snippets shown<small>How many items appear in "Recently Added"</small></div>
+        <select id="recent-count">
+          <option value="3">3</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+
+      <div class="setting-row">
+        <div>Default language<small>Pre-filled when adding a new snippet</small></div>
+        <input type="text" id="default-lang" list="languages" placeholder="e.g. JavaScript">
+        <datalist id="languages">
+          <option value="HTML"><option value="CSS"><option value="JavaScript">
+          <option value="Python"><option value="Java"><option value="C++">
+          <option value="C#"><option value="PHP"><option value="SQL">
+        </datalist>
+      </div>
+    </section>
+
+    <!-- Data -->
+    <section class="panel">
+      <h2>Your Data</h2>
+      <p>You currently have <strong id="snippet-total">0</strong> snippets
+         (<strong id="fav-total">0</strong> favorites). They are stored only in this browser.</p>
+      <div class="data-buttons">
+        <button id="export-btn">⬇ Export backup</button>
+        <label class="file-btn">⬆ Import backup
+          <input type="file" id="import-file" accept=".json" hidden>
+        </label>
+        <button id="clear-btn" class="danger">Delete all snippets</button>
+      </div>
+    </section>
+
+    <!-- How to use effectively -->
+    <section class="panel">
+      <h2>How to Use This Site Effectively</h2>
+
+      <details open>
+        <summary>1. Write clear titles</summary>
+        <p>Name snippets by what they do ("Debounce function"), not by what they are ("JS code 3"). Future you will find them much faster.</p>
+      </details>
+
+      <details>
+        <summary>2. Keep language names consistent</summary>
+        <p>Always type the language the same way (e.g. "JavaScript", not "js" or "Javascript"). The language filter and the "Different Languages" counter treat different spellings as different languages.</p>
+      </details>
+
+      <details>
+        <summary>3. Favorite what you reuse</summary>
+        <p>Press ☆ Favorite on snippets you use often. They appear in Saved CodeBlocks, where you can also edit them as your code improves.</p>
+      </details>
+
+      <details>
+        <summary>4. Keep one snippet focused</summary>
+        <p>Store one idea per snippet. Small, focused snippets are easier to copy and reuse than long files.</p>
+      </details>
+
+      <details>
+        <summary>5. Use the filter and the Copy button</summary>
+        <p>On the DashBoard, filter by language, then press Copy to put the code on your clipboard without selecting it manually.</p>
+      </details>
+
+      <details>
+        <summary>6. Back up regularly</summary>
+        <p>Your snippets live in this browser only. Clearing browser data or switching devices will lose them, so use <strong>Export backup</strong> every now and then. You can restore with <strong>Import backup</strong>.</p>
+      </details>
+
+      <details>
+        <summary>Shortcuts</summary>
+        <ul>
+          <li><strong>+</strong> button (bottom right): add a new snippet</li>
+          <li><strong>Esc</strong>: close any popup</li>
+          <li>Click outside a popup: close it</li>
+        </ul>
+      </details>
+    </section>
+  </main>
+
+  <script src="index4.js"></script>
+</body>
+</html>

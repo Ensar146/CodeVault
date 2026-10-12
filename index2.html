@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DashBoard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="settings.js"></script>
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-btn">☰</label>
+
+  <nav class="menu">
+    <a href="index.html">Main Page</a>
+    <a href="index2.html">DashBoard</a>
+    <a href="index3.html">Saved CodeBlocks</a>
+    <a href="index4.html">Help & Settings</a>
+  </nav>
+
+  <main class="dashboard">
+    <h1>DashBoard</h1>
+
+    <section class="stats">
+      <div class="card">
+        <span class="stat-number" id="total-count">0</span>
+        <span>Total Snippets</span>
+      </div>
+      <div class="card">
+        <span class="stat-number" id="type-count">0</span>
+        <span>Different Languages</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Recently Added</h2>
+      <ul id="recent-list" class="recent-list"></ul>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>All Code Snippets</h2>
+        <select id="filter">
+          <option value="all">All Languages</option>
+        </select>
+      </div>
+      <div id="snippet-grid" class="snippet-grid"></div>
+    </section>
+  </main>
+
+  <button id="add-btn" class="add-btn">+</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-box">
+      <h2>New Code Snippet</h2>
+
+      <label for="title">Title</label>
+      <input type="text" id="title" placeholder="e.g. Array sorting">
+
+      <label for="type">Programming Language</label>
+      <input type="text" id="type" list="languages" placeholder="Choose or type...">
+      <datalist id="languages">
+        <option value="HTML">
+        <option value="CSS">
+        <option value="JavaScript">
+        <option value="Python">
+        <option value="Java">
+        <option value="C++">
+        <option value="C#">
+        <option value="PHP">
+        <option value="SQL">
+      </datalist>
+
+      <label for="code">Code</label>
+      <textarea id="code" rows="8" placeholder="Paste your code here..."></textarea>
+
+      <div class="modal-buttons">
+        <button id="cancel-btn" class="btn-gray">Cancel</button>
+        <button id="save-btn" class="btn-blue">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
